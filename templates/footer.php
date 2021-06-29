@@ -1,0 +1,2 @@
+    <footer>Gcoin</footer>
+</body>

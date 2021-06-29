@@ -1,0 +1,16 @@
+<!--<h1 element id = "nameDisp"><?PHP echo $name["name"];?></h1> -->
+        <h2 element id = "dateDisp"><?PHP echo date('l, F d, Y');?></h2>
+        <!-- <h3><?PHP if ($currentPrice < 100){echo 'current price is ' . "¢$currentPrice";} else {if($currentPrice % 10 != 0){echo 'current price is ' . '$' . $currentPrice/100;}else{echo 'current price is ' . '$' . $currentPrice/100 . '0';}}?></h3> -->
+        <!--<h5 element id = "balanceDisp"><img src="silverCoin.png"><?PHP echo "     ";echo $name["balance"] ?></h5> -->
+
+        <div class = "GcoinDivision">
+            <h1 element id = "GcoinDivisionGcoinHeader">Gcoin</h1>
+            <img elemt id = "GcoinDivisionGcoinImg"src="Gcoin1080p.png"
+                width = 85% 
+                height = auto
+            >
+            <img elemt id = "GcoinDivisionGcoinGraphImg"src="graph.png"
+                width = 100% 
+                height = auto
+            >
+        </div>
