@@ -1,4 +1,4 @@
-.lightgrey-background {
+.rgb-266-background {
   background-color: rgb(226, 226, 226);
 }
 .grey-background {
@@ -9,6 +9,9 @@
 }
 .green-background {
   background-color: green;
+}
+.rgb-170-color {
+  color: rgb(170, 170, 170);
 }
 .text-size-5rem {
   font-size: 5rem;
@@ -33,10 +36,23 @@
   margin: 5px;
   padding: 15px;
   border-radius: 5px;
+  font-size: 2rem;
+}
+.submit-buttons {
+  margin: 5px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+.size-2rem {
+  font-size: 2rem;
 }
 ul {
   list-style-type: none;
 }
 .align-center {
   text-align: center;
+}
+.font-arial-sansserif {
+  font-family: Arial, sans-serif;
 }

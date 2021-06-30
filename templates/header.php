@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="styles/indexStyle.css" type="text/css">
 </head>
 
-<body class='lightgrey-background no-margin'>
+<body class='rgb-266-background no-margin'>
     <nav class='grey-background header'>
         <div class=''>
             <a href="index.php" class='brand-logo text-size-5rem'>Gcoin</a>

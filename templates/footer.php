@@ -1,2 +1,2 @@
-    <footer class = 'align-center'>Gcoin</footer>
+    <footer class = 'align-center rgb-170-color font-arial-sansserif'><br><br>For reporting issues please contact me at <br>Email : grifkin1118@gmail.com<br>Discord : &ltDeleted&gt#5683<br>Gcoin</footer>
 </body>

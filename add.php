@@ -59,10 +59,7 @@ mysqli_close($conn);
         }
 
         if(!$loggedInAs == null){
-            print_r($loggedInAs);
-            $loggedInAsFile = fopen("loggedInAsFile.php", "w");
-            fwrite($loggedInAsFile, '$loggedInAs = [\'name => ' . $loggedInAs['name'] . ', password\']');
-            fclose($loggedInAsFile);
+            header('location: index.php');
         }
     }
 
@@ -71,18 +68,20 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <?PHP include 'templates/header.php' ?>
     <section>
-        <form action="add.php" method="POST">
-            <Label><h1>Login</h1></Label>
-            <Label>Your Name:</Label>
-            <input type="text" name="name" autocomplete="off" value=<?PHP echo htmlspecialchars($name); ?>>
-            <div><?PHP echo $errors['name'] ?></div>
-            <Label>Your Password:</Label>
-            <input type="text" name="password" autocomplete="off" value=<?PHP echo htmlspecialchars($password); ?>>
-            <div><?PHP echo $errors['password'] ?></div>
-            <div>
-                <input type="submit" name="submit" value="submit">
-            </div>
-        </form>
+        <div class='align-center'>
+            <Label class='font-arial-sansserif size-2rem'><h1 >Login</h1></Label>
+            <form action="add.php" method="POST">
+                <Label class='font-arial-sansserif size-2rem'>Your Name:<br></Label>
+                <input type="text" name="name" autocomplete="off" class='size-2rem' value=<?PHP echo htmlspecialchars($name); ?>>
+                <div><?PHP echo $errors['name'] ?></div>
+                <Label class='font-arial-sansserif size-2rem'>Your Password:<br></Label>
+                <input type="text" name="password" autocomplete="off" class='size-2rem' value=<?PHP echo htmlspecialchars($password); ?>>
+                <div><?PHP echo $errors['password'] ?></div>
+                <div>
+                    <input type="submit" name="submit" value="submit" class='submit-buttons align-center'>
+                </div>
+            </form>
+        </div>
     </section>
 <?PHP include 'templates/footer.php' ?>
 </html>
