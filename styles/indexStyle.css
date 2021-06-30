@@ -1,63 +1,42 @@
-/* header that says your name */
-#nameDisp {
-  font-size: 75px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* header that says the current date */
-#dateDisp {
-  font-size: 50px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* text that displays balence in dollars in top right corner */
-#balanceDisp {
-  font-size: 30px;
-  margin-top: 10;
-  margin-bottom: 0;
-  position: absolute;
-  top: 0;
-  right: 50;
-}
-
-/* Div that displays Gcoin and Gcoin info */
-.GcoinDivision {
-  /* disables highlighting text */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  /* diables dragging images */
-  pointer-events: none;
-
-  /* center text, add border outline */
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  border-radius: 10px;
-  padding: 10px;
-}
-#GcoinDivisionGcoinHeader {
-  /* centers text, makes margins look better */
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-#GcoinDivisionGcoinImg {
-  /* centers text */
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-#pageBody {
+.lightgrey-background {
   background-color: rgb(226, 226, 226);
 }
-#headerNav {
+.grey-background {
+  background-color: gray;
+}
+.white-background {
   background-color: white;
+}
+.green-background {
+  background-color: green;
+}
+.text-size-5rem {
+  font-size: 5rem;
+}
+.header {
+  padding: 1rem;
+  border-radius: 0px 0px 5px 5px;
+}
+.no-margin {
+  margin: 0px;
+}
+.brand-logo {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+.right {
+  float: right;
+}
+.list-buttons {
+  margin: 5px;
+  padding: 15px;
+  border-radius: 5px;
+}
+ul {
+  list-style-type: none;
+}
+.align-center {
+  text-align: center;
 }

@@ -69,11 +69,7 @@ mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Gcoin</title>
-</head>
-<body>
+<?PHP include 'templates/header.php' ?>
     <section>
         <form action="add.php" method="POST">
             <Label><h1>Login</h1></Label>
@@ -88,5 +84,5 @@ mysqli_close($conn);
             </div>
         </form>
     </section>
-</body>
+<?PHP include 'templates/footer.php' ?>
 </html>
