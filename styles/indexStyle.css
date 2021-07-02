@@ -13,6 +13,9 @@
 .rgb-170-color {
   color: rgb(170, 170, 170);
 }
+.red-color {
+  color: red;
+}
 .text-size-5rem {
   font-size: 5rem;
 }
@@ -37,6 +40,7 @@
   padding: 15px;
   border-radius: 5px;
   font-size: 2rem;
+  display: inline;
 }
 .submit-buttons {
   margin: 5px;
@@ -46,6 +50,10 @@
 }
 .size-2rem {
   font-size: 2rem;
+}
+.widthHeight-2rem {
+  width: 2rem;
+  height: 2rem;
 }
 ul {
   list-style-type: none;

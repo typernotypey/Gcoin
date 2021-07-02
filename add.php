@@ -3,7 +3,7 @@
 include 'config/db_connect.php';
 
 //write query from Gcoin database
-$sql = 'SELECT name, password, id FROM users';
+$sql = 'SELECT name, password, id, token FROM users';
 
 //make query and get results
 $result = mysqli_query($conn, $sql);
@@ -47,6 +47,11 @@ mysqli_close($conn);
                     if(in_array($password, $users[$i])){
                         print_r('name and password are correct');
                         $loggedInAs = $users[$i];
+                        if($_POST['rememberMe']){
+                            setcookie('token', $users[$i]['token'], strtotime( '30 days' ));
+                        } else{
+                            setcookie('token', $users[$i]['token'], strtotime( '30 days' ));
+                        }
                     } else{
                         $errors['password'] = 'password is incorrect';
                     }
@@ -58,9 +63,6 @@ mysqli_close($conn);
             } 
         }
 
-        if(!$loggedInAs == null){
-            header('location: index.php');
-        }
     }
 
 ?>
@@ -71,12 +73,16 @@ mysqli_close($conn);
         <div class='align-center'>
             <Label class='font-arial-sansserif size-2rem'><h1 >Login</h1></Label>
             <form action="add.php" method="POST">
-                <Label class='font-arial-sansserif size-2rem'>Your Name:<br></Label>
+                <Label for='name'class='font-arial-sansserif size-2rem'>Your Name:</Label><br>
                 <input type="text" name="name" autocomplete="off" class='size-2rem' value=<?PHP echo htmlspecialchars($name); ?>>
                 <div><?PHP echo $errors['name'] ?></div>
-                <Label class='font-arial-sansserif size-2rem'>Your Password:<br></Label>
+                <Label for='password' class='font-arial-sansserif size-2rem'>Your Password:</Label><br>
                 <input type="text" name="password" autocomplete="off" class='size-2rem' value=<?PHP echo htmlspecialchars($password); ?>>
                 <div><?PHP echo $errors['password'] ?></div>
+                <label class="font-arial-sansserif size-2rem" for="rememberMe">Remember for 30 days?</label><br>
+                <input class ="widthHeight-2rem" type="checkbox" name="rememberMe">
+                <br>
+                <br>
                 <div>
                     <input type="submit" name="submit" value="submit" class='submit-buttons align-center'>
                 </div>
