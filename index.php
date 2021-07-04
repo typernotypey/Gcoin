@@ -1,6 +1,6 @@
 <?PHP 
 
-include 'config/db_connect.php'
+include 'config/db_connect.php';
 
 //write query from Gcoin database
 $sql = 'SELECT name, password, id, token FROM users';
