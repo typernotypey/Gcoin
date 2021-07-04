@@ -49,8 +49,10 @@ mysqli_close($conn);
                         $loggedInAs = $users[$i];
                         if($_POST['rememberMe']){
                             setcookie('token', $users[$i]['token'], strtotime( '30 days' ));
+                            header('location: index.php');
                         } else{
-                            setcookie('token', $users[$i]['token'], strtotime( '30 days' ));
+                            setcookie('token', $users[$i]['token'], 0);
+                            header('locaiton: index.php');
                         }
                     } else{
                         $errors['password'] = 'password is incorrect';
