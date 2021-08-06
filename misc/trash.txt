@@ -14,3 +14,19 @@
                 height = auto
             >
         </div>
+
+<form action="transactions/fastTransaction.php" method="POST">
+			<select name="buyOrSellDropdown" class="size-2rem">
+				<option value="buy" selected>Buy</option>
+				<option value="sell">Sell</option>
+			</select>
+			<select name="amountOrPrice" class="size-2rem">
+				<option value="amount" selected>by amount:</option>
+				<option value="price">by price:</option>
+			</select>
+			<input type="text" name="FastBuySellInputBox" class="size-2rem">
+			<!--submit-->
+			<div>
+                    <input type="submit" name="FastBuySellSubmit" value="submit" class='submit-buttons align-center'>
+            </div>
+		</form>

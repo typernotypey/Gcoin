@@ -3,7 +3,7 @@
 include 'config/db_connect.php';
 
 //write query from Gcoin database
-$sql = 'SELECT name, password, id, token FROM users';
+$sql = 'SELECT id, name, password, token FROM users';
 
 //make query and get results
 $result = mysqli_query($conn, $sql);
@@ -78,6 +78,11 @@ if(isset($_POST['submit'])){ // check if form has been submitted
     }
 }
 
+//free $result
+mysqli_free_result($result);
+
+//close connection
+mysqli_close($conn);
 
 ?>
 

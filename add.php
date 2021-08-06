@@ -3,7 +3,7 @@
 include 'config/db_connect.php';
 
 //write query from Gcoin database
-$sql = 'SELECT name, password, id, token FROM users';
+$sql = 'SELECT id, name, password, token FROM users';
 
 //make query and get results
 $result = mysqli_query($conn, $sql);
@@ -52,7 +52,7 @@ mysqli_close($conn);
                             header('location: index.php');
                         } else{
                             setcookie('token', $users[$i]['token'], 0);
-                            header('locaiton: index.php');
+                            header('location: index.php');
                         }
                     } else{
                         $errors['password'] = 'password is incorrect';
